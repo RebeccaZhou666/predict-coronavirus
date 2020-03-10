@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Prediction of Coronavirus in US</title>
+  <!-- remove the rel can prevent the MIME error in Express -->
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <script src="https://cdn.staticfile.org/echarts/4.6.0/echarts.min.js"></script>
+</head>
+<body class="body">
+  <div class="contents"></div>
+  <h1 class="dashboard-title">Predicting Coronavirus Cases in US</h1>
+  <div class="layout-grid grid">
+    <div id="current-data" class="grid-content">
+      <div class="wrapper">
+        <h4 class="heading">United States</h4>
+        <div class="case_wrapper">
+          <div class="case_detail_wrapper">
+            <div id="confirmed" class="number confirmed">572</div>
+            <p class="paragraph-3">Confirmed</p>
+          </div>
+          <div class="case_detail_wrapper">
+            <div id="recovered" class="number recovered">572</div>
+            <p class="paragraph-2">Recovered</p>
+          </div>
+          <div class="case_detail_wrapper">
+            <div id="death" class="number death">572</div>
+            <p class="paragraph">Death</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="chart-data" class="chart-wrapper">
+      <div id="echarts-input"></div>
+      <p class="notes">Resources: 1Point3Aceres.com</p>
+    </div>
+    <div id="form-data" class="form-wrapper">
+      <div class="form-block">
+        <form id="form-prediction-id" name="form-prediction" data-name="prediction" class="form">
+          <h3 class="heading-3">Join The Prediction</h3>
+          <label for="name" class="field-label">How many cases do you think the US will reach by the end of tomorrow?</label>
+          <input type="number" class="text-field" maxlength="256" name="number" data-name="Number" id="number">
+          <button type="button" id="submit" class="submit-button">Submit</button>
+          <!-- <input id="submit" type="submit" value="Submit" class="submit-button"> -->
+        </form>
+      </div>
+    </div>
+    <div id="predict-data" class="grid-content">
+      <div class="wrapper">
+        <h4 id="prediction" class="heading">Predicted Cases on 2020-3-10</h4>
+        <div class="case_wrapper">
+          <div class="case_detail_wrapper">
+            <div id="predict-case" class="number confirmed">871</div>
+            <p class="paragraph-3">Averaged Prediction</p>
+          </div>
+          <div class="case_detail_wrapper">
+            <div id="people" class="number recovered">12</div>
+            <p class="paragraph-2">People Attended</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+  <script src="js/charts.js" type="text/javascript"></script>
+</body>
+</html>

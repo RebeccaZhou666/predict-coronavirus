@@ -1,0 +1,17 @@
+{
+  "name": "spider2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Rebecca",
+  "license": "ISC",
+  "dependencies": {
+    "express-csp-header": "^3.0.0",
+    "helmet-csp": "^2.9.5",
+    "nedb": "^1.8.0"
+  }
+}
