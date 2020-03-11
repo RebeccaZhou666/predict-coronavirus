@@ -1,10 +1,8 @@
 # Predicting The Coronavirus
 
 Gather data from people about their prediction on future coronavirus cases. 
-See [Predicting The Coronavirus](https://rebeccazhou666-dwd-hw4.glitch.me/) Here.
-
-Also video demo is here.
-[![Watch the video](pictures/design2.png)](https://youtu.be/pN4CCRj_4L8)
+See video demo is here. The deployment fails, still debuging it. But it runs smoothly on my localserver.
+[![Watch the video](pictures/design2.png)](https://youtu.be/Xd_BGfLHVj8)
 
 # About
 It's a dashboard that allows users to monitor the current coronavirus situation and predict the upcoming coronavirus case in the next day. Data source from [1point3acres](https://coronavirus.1point3acres.com/en).
@@ -45,7 +43,7 @@ So I want to use people's prediction of the incoming coronavirus cases to see th
 
 # Design
 The sketch is as below.
-![sketch of website](pictures/sketch.png)
+![sketch of website](pictures/sketch.jpg)
 
 The next step is to design hi-fi prototype in sketch. I tried two version and finally chose the second one.
 ![color palette](pictures/color.png)
@@ -94,7 +92,8 @@ function updateData(newData) {
     db.update({time: newData.time}, {number:newData.number, time:newData.time});
 }
 ~~~
-I soon found that the ```update```syntax would replace the doc entirely and create new one (which is strange). I still has the problem which led to the problem of not showing the prediction data because of multiple scatters in the same spot. 
+I soon found that the ```update```syntax would replace the doc entirely and create new one (which is strange). I still has the problem which led to the problem of not showing the prediction data because of multiple scatters in the same spot. Every time I refreshed the page, it will insert a data into the database.
+![update](pictures/data.png)
 
 # Deployment
 
@@ -103,8 +102,10 @@ But this time, Glitch shows lots of mistakes which I never see... sigh<br />
 
 
 # Reference & Credits
-[COVID-19 Real-time updates](https://coronavirus.1point3acres.com/en)
-[normalize.css](https://necolas.github.io/normalize.css/)
+* [COVID-19 Real-time updates](https://coronavirus.1point3acres.com/en)
+* [Echarts](https://www.echartsjs.com/en/index.html)
+* [normalize.css](https://necolas.github.io/normalize.css/)
+
 
 ## Built with
 
